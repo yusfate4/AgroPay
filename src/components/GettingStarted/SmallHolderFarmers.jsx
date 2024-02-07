@@ -5,16 +5,17 @@ import Logo from "../../assets/AP.svg";
 function SmallHolderFarmers({ goToPage2, goToPage3 }) {
   return (
     <div className="px-4 py-2">
-      <div>
+     <div>
         <img src={Logo} alt="" className="w-12 h-12" />
       </div>
-      <div className="mt-20">
-        <img src={amico} alt="" className="w-80 h-80" />
-        <p className="text-white font-semibold text-3xl py-5">
-          SmallHolder <br /> Farmers
+     <div className='flex flex-col items-center mx-auto w-full lg:w-1/2'>
+      <div className="mt-20 lg:mt-10">
+        <img src={amico} alt="" className="w-80 lg:w-96 h-80 lg:h-96" />
+        <p className="text-white font-semibold text-3xl lg:text-4xl py-5 lg:py-7">
+          SmallHolder <br className='lg:hidden'/> Farmers
         </p>
       </div>
-      <div className="flex flex-row items-center justify-between mt-10">
+      <div className="flex flex-row items-center w-full justify-between md:justify-around mt-10">
         <div className="dots flex flex-row ">
           <GoDotFill className="text-white w-5 h-5" />
           <GoDotFill className="text-black w-5 h-5" />
@@ -30,6 +31,7 @@ function SmallHolderFarmers({ goToPage2, goToPage3 }) {
           Skip
         </button>
       </div>
+     </div>
     </div>
   );
 }

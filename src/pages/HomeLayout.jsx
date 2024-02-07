@@ -14,7 +14,7 @@ const HomeLayout = () => {
     // After 3000 milliseconds (3 seconds), switch to the first real page
     const timer = setTimeout(() => {
       setCurrentPage("small-holder");
-    }, 2 * 60 * 60);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -40,7 +40,7 @@ const HomeLayout = () => {
   };
 
   return (
-    <div className="px-4 py-6 bg-gradient-to-b from-emerald-700 from-20% to-slate-500 to-100% w-full h-[100vh]">
+    <div className="px-4 lg:px-6 py-6  bg-gradient-to-b from-emerald-700 from-20% to-slate-500 to-100% w-full bg-red-600 h-[100vh]">
       {renderPage()}
     </div>
   );

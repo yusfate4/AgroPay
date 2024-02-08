@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { Login, SignUp, HomeLayout } from "./pages";
+
 import Navbar from "./components/LandingPage/Navbar";
 import HeroSection from "./components/LandingPage/HeroSection";
 import About from "./components/LandingPage/About";
@@ -20,7 +20,6 @@ import {
   RegMessage,
   PassWordMSG,
 } from './pages'
-=======
 
 
 const router = createBrowserRouter([

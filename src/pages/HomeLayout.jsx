@@ -45,7 +45,7 @@ const HomeLayout = () => {
     <div className="px-4 py-6 bg-gradient-to-b from-emerald-700 from-20% to-slate-500 to-100% w-full h-[100vh]">
       {renderPage()}
     </div>
-  );
+  
 };
 
 

@@ -1,6 +1,11 @@
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import React from 'react'
-import {RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Login, SignUp, HomeLayout } from "./pages";
+import Navbar from "./components/LandingPage/Navbar";
+import HeroSection from "./components/LandingPage/HeroSection";
+import About from "./components/LandingPage/About";
+
 
 import {
   Login,
@@ -15,17 +20,32 @@ import {
   RegMessage,
   PassWordMSG,
 } from './pages'
+=======
+
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <HomeLayout />,
   },
+
   {
-    path: '/login',
+    path: "/landing-page",
+    element: (
+      <div>
+        <Navbar />
+        <HeroSection />
+        <About />
+
+      </div>
+    ),
+  },
+  {
+    path: "/login",
     element: <Login />,
   },
   {
+
     path: '/SignIn',
     element: <SignIn />,
   },
@@ -60,14 +80,15 @@ const router = createBrowserRouter([
   {
     path: '/reg',
     element: <RegMessage />,
+
+    path: "/SignUp",
+    element: <SignUp />,
+
   },
-])
+]);
 
 const App = () => {
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />;
+};
 
- 
-  
-}
-
-export default App
+export default App;

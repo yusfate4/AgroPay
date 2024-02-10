@@ -1,8 +1,10 @@
+
 import React, { useState, useEffect } from "react";
 import SmallHolderFarmers from "../components/GettingStarted/SmallHolderFarmers";
 import FarmAsset from "../components/GettingStarted/FarmAsset";
 import Wallet from "../components/GettingStarted/Wallet";
-import InitialLoadPage from "../components/GettingStarted/InitialLoadPage";
+import InitialLoadPage from "../components/GettingStarted/InitialLoadPage"
+
 const HomeLayout = () => {
   const [currentPage, setCurrentPage] = useState("initialPage");
 
@@ -40,10 +42,11 @@ const HomeLayout = () => {
   };
 
   return (
-    <div className="px-4 lg:px-6 py-6  bg-gradient-to-b from-emerald-700 from-20% to-slate-500 to-100% w-full bg-red-600 h-[100vh]">
+    <div className="px-4 py-6 bg-gradient-to-b from-emerald-700 from-20% to-slate-500 to-100% w-full h-[100vh]">
       {renderPage()}
     </div>
-  );
+  )
 };
+
 
 export default HomeLayout;

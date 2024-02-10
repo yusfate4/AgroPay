@@ -2,7 +2,12 @@ import React from "react";
 import asset from "../../assets/bro.svg";
 import { GoDotFill } from "react-icons/go";
 import Logo from "../../assets/AP.svg";
+import { useNavigate } from "react-router-dom";
 function Wallet({ goToPage1 }) {
+  const navigate = useNavigate()
+  const handleStartingPage =()=> {
+    navigate('/SignIn')
+  }
   return (
     <div className="px-4 py-2">
       <div>
@@ -22,7 +27,7 @@ function Wallet({ goToPage1 }) {
           <GoDotFill className="text-white w-5 h-5" />
         </div>
         <button
-          onClick={goToPage1}
+          onClick={handleStartingPage}
           className="bg-yellow-500 text-white text-2xl rounded-3xl px-5 py-2 border-2 font-semibold"
         >
           Get Started
